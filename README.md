@@ -2,18 +2,22 @@
 
 general purpose language specific and optionally language agnostic parser for unescaped matches
 
-#### Usage
+### Usage
 
-  var c_lang = ' hello // world\n /*world*/ void world(){ if(true) {printf("}") console.log("good \\"job")}}';
-  var parser = Parsescape(clang, 'c');
-  assert(parser.find('}') === c_lang.length - 2);
 
-  var custom_lang = 'this is a new language where `back ticks are used for strings`, do you like strings like this?';
-  // provide a list of escapers, or if this language is popular fork and pull it on github
-  var parser = Parsescape(custom_lang, [['`','`']]);
-  assert(parser.find('string') === 76);
+    var c_lang = ' hello // world\n /*world*/ void world(){ if(true) {printf("}") console.log("good \\"job")}}';
+    var parser = Parsescape(clang, 'c');
+    assert(parser.find('}') === c_lang.length - 2);
 
-#### License
+
+    var custom_lang = 'this is a new language where \`back ticks are used for strings\`, do you like strings like this?';
+    // provide a list of escapers, or if this language is popular fork and pull it on github
+    var parser = Parsescape(custom_lang, [['\`','\`']]);
+    assert(parser.find('string') === 76);
+
+
+
+### License
 
 The MIT License (MIT)
 
