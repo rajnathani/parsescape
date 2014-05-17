@@ -9,10 +9,11 @@ general purpose language specific and optionally language agnostic parser for un
     var parser = Parsescape(clang, 'c');
     assert(parser.find('}') === c_lang.length - 2);
 
+\
 
-    var custom_lang = 'this is a new language where \`back ticks are used for strings\`, do you like strings like this?';
+    var custom_lang = 'this is a new language where `back ticks are used for strings`, do you like strings like this?';
     // provide a list of escapers, or if this language is popular fork and pull it on github
-    var parser = Parsescape(custom_lang, [['\`','\`']]);
+    var parser = Parsescape(custom_lang, [['`','`']]);
     assert(parser.find('string') === 76);
 
 
