@@ -1,6 +1,6 @@
 {
   "name": "parsescape",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "general purpose language specific and optionally language agnostic parser for unescaped matches",
   "main": "lib/index.js",
   "scripts": {
